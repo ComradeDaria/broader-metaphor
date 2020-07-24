@@ -175,7 +175,7 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    features = np.load(args.features_file)
+    features = np.load(args.features_file, allow_pickle=True)
 
     print("====L (LEMMA)====")
     F, stats = classify_vuamc(features, ['v_embs'],
